@@ -16,11 +16,14 @@ export class TestComponent implements OnInit {
     ngOnInit() {
 
         console.log('called test app...................');
-        // this.getData();
+        this.getData();
     }
 
     getData() {
-
+        this.service.getDatas()
+            .subscribe(d => {
+                console.log(d);
+            });
     }
 }
 
